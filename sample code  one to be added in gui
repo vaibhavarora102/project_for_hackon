@@ -1,0 +1,509 @@
+covid=0
+typhoid=0
+chicken_pox=0
+pneumonia=0
+influenza=0
+sars=0
+mers=0
+ebola=0
+malaria=0
+
+##############--------------------# set yes, no and may be as input to to each symptomm
+query=input()
+
+
+#---------------------------- and follow following
+
+
+#------------------in case of fever
+if query=='yes':
+    covid += 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza += 1
+    sars += 1
+    mers += 1
+    ebola += 1
+    malaria +=1
+
+elif query=='no':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza -= 1
+    sars -= 1
+    mers -= 1
+    ebola -= 1
+    malaria -= 1
+
+if query=='may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+# ##-----------------------in case of headache
+
+if query=='yes':
+    covid += 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia -= 1
+    influenza += 1
+    sars += 1
+    mers += 1
+    ebola += 1
+    malaria -=1
+
+elif query=='no':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia += 1
+    influenza -= 1
+    sars -= 1
+    mers -= 1
+    ebola -= 1
+    malaria += 1
+
+elif query=='may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+
+#----------------------- for Diarrhea
+
+if query=='yes':
+    covid += 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza -= 1
+    sars -= 1
+    mers += 1
+    ebola -= 1
+    malaria -=1
+
+elif query=='no':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza += 1
+    sars += 1
+    mers -= 1
+    ebola += 1
+    malaria += 1
+
+elif query=='may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+#---------------------------------------- for Dry-cough
+
+if query=='yes':
+    covid += 1
+    typhoid += 1
+    chicken_pox -= 1
+    pneumonia += 1
+    influenza += 1
+    sars += 1
+    mers += 1
+    ebola += 1
+    malaria -=1
+
+elif query=='no':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox += 1
+    pneumonia -= 1
+    influenza -= 1
+    sars -= 1
+    mers -= 1
+    ebola -= 1
+    malaria += 1
+
+if query=='may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+# ------------------------------------------------for Lethargy(exhaustion)
+
+if query=='yes':
+    covid += 1
+    typhoid -= 1
+    chicken_pox += 1
+    pneumonia -= 1
+    influenza += 1
+    sars -= 1
+    mers -= 1
+    ebola -= 1
+    malaria -=1
+
+elif query=='no':
+    covid -= 1
+    typhoid += 1
+    chicken_pox -= 1
+    pneumonia += 1
+    influenza -= 1
+    sars += 1
+    mers += 1
+    ebola += 1
+    malaria += 1
+
+elif query=='may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+
+#-------------------------------------------------------------------- for Body pain
+
+if query=='yes':
+    covid += 1
+    typhoid += 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza += 1
+    sars -= 1
+    mers -= 1
+    ebola += 1
+    malaria -=1
+
+elif query=='no':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza -= 1
+    sars += 1
+    mers += 1
+    ebola -= 1
+    malaria += 1
+
+elif query=='may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+
+# --------------------------for vomiting
+
+if query=='yes':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia += 1
+    influenza += 1
+    sars -= 1
+    mers += 1
+    ebola += 1
+    malaria +=1
+
+elif query=='no':
+    covid += 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia -= 1
+    influenza -= 1
+    sars += 1
+    mers -= 1
+    ebola -= 1
+    malaria -= 1
+
+elif query=='may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+# ---------------------------for sweating
+
+if query=='yes':
+    covid -= 1
+    typhoid += 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza -= 1
+    sars -= 1
+    mers -= 1
+    ebola -= 1
+    malaria += 1
+
+elif query=='no':
+    covid += 1
+    typhoid -= 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza += 1
+    sars += 1
+    mers += 1
+    ebola += 1
+    malaria -= 1
+
+elif query=='may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+#  ------------------------------------------for muscle aches
+if query == 'yes':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza -= 1
+    sars += 1
+    mers -= 1
+    ebola -= 1
+    malaria -= 1
+
+elif query == 'no':
+    covid += 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza += 1
+    sars -= 1
+    mers += 1
+    ebola += 1
+    malaria += 1
+
+if query == 'may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+# ------------------------------------------for difficulty
+
+if query == 'yes':
+    covid += 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza -= 1
+    sars += 1
+    mers += 1
+    ebola -= 1
+    malaria -= 1
+
+elif query == 'no':
+    covid -= 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza += 1
+    sars -= 1
+    mers -= 1
+    ebola += 1
+    malaria += 1
+
+elif query == 'may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+# ------------------------------for naueseaa
+
+if query == 'yes':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza -= 1
+    sars -= 1
+    mers += 1
+    ebola -= 1
+    malaria += 1
+
+elif query == 'no':
+    covid += 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza += 1
+    sars += 1
+    mers -= 1
+    ebola += 1
+    malaria -= 1
+
+elif query == 'may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+# ------------------------------------in case of muscle pain
+
+if query == 'yes':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza -= 1
+    sars -= 1
+    mers -= 1
+    ebola += 1
+    malaria += 1
+
+elif query == 'no':
+    covid += 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza += 1
+    sars += 1
+    mers += 1
+    ebola -= 1
+    malaria -= 1
+
+if query == 'may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+
+# -----------------------------in case of chills chills
+
+if query == 'yes':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza -= 1
+    sars -= 1
+    mers -= 1
+    ebola += 1
+    malaria += 1
+
+elif query == 'no':
+    covid += 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza += 1
+    sars += 1
+    mers += 1
+    ebola -= 1
+    malaria -= 1
+
+elif query == 'may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
+
+
+#--------------------------- in case of red eyes
+
+if query == 'yes':
+    covid -= 1
+    typhoid -= 1
+    chicken_pox -= 1
+    pneumonia -= 1
+    influenza -= 1
+    sars -= 1
+    mers -= 1
+    ebola += 1
+    malaria -= 1
+
+elif query == 'no':
+    covid += 1
+    typhoid += 1
+    chicken_pox += 1
+    pneumonia += 1
+    influenza += 1
+    sars += 1
+    mers += 1
+    ebola -= 1
+    malaria += 1
+
+if query == 'may be':
+    covid += 0.4
+    typhoid += 0.4
+    chicken_pox += 0.4
+    pneumonia += 0.4
+    influenza += 0.4
+    sars += 0.4
+    mers += 0.4
+    ebola += 0.4
+    malaria += 0.4
