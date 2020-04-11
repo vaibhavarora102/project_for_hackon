@@ -510,7 +510,8 @@ if query == 'may be':
 
 #--------------------------- Calculating the three highest possible diseases ----------------------#
 
-#---------------------------Function for finding three greatest values is created
+# The Highest Values will give the output as the disease name for example if covid-19 is max "Covid" can be printed 
+# which will be stored in the "Which_highest" variable which will intialized first as an empty string
 
 
 Highest_valuesof_diseases = [7,6,4,4,4,5,7,8,7]
@@ -546,3 +547,34 @@ for i in range(0, len(Average_Values), +1):
                     Which_third_highest = Names[i]
                     
 # First highest must be found in the form of string
+# Findint Second largest average value if it is not yet being stored as a string
+Temporary_second_highest = 0
+if(len(Which_second_highest) == 0):
+    Find_second_names = Names.copy()
+    Find_second_names.remove(Which_highest)
+    Find_second_highest = Average_Values.copy()
+    Find_second_highest.remove(highest_possibility)
+    Temporary_second_highest = max(Find_second_highest)
+    for i in range(0,len(Find_second_names), +1):
+        if(Find_second_highest[i] == Temporary_second_highest):
+            if(len(Which_second_highest) == 0):
+                Which_second_highest = Find_second_names[i]
+            else:
+                if(len(Which_third_highest) == 0):
+                    Which_third_higest = Find_second_names[i]
+
+# Finding third largest average value if it is not yet being stored as a string
+if(len(Which_third_highest) == 0):
+    Find_third_names = Names.copy()
+    Find_third_names.remove(Which_highest)
+    Find_third_names.remove(Which_second_highest)
+    Find_third_highest = Average_Values.copy()
+    Find_third_highest.remove(highest_possiblity)
+    Find_third_highest.remove(Temporary_second_highest)
+    Temporary_third_highest = max(Find_third_highest)
+    for i in range(0,len(Find_third_names), +1):
+        if(Find_third_names[i] == Temporary_third_highest):
+            Which_third_highest = Find_third_names[i]
+            break
+    
+                
