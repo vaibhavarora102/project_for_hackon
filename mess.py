@@ -788,22 +788,36 @@ def query_fun(answer_value):
         ebola += 0.4
         malaria += 0.4
          
+            
+            
+            
     #--------------------------- Calculating the three highest possible diseases ----------------------#
     # The Highest Values will give the output as the disease name for example if covid-19 is max "Covid" can be printed 
     # which will be stored in the "Which_highest" variable which will intialized first as an empty string
+    
+    
+    
+    
+    # ------------------------------------- NOTE ----------------------------------->
+    # The values of the resulting string are stored in the string named as follows-->
+    
+    # Top Possible disease --> Which_highest
+    
+    # Second Possible disease --> Which_second_highest
+    
+    # Third Possible disease --> Which_third_highest
+    
     Highest_valuesof_diseases = [7,6,4,4,4,5,7,8,7]
+    
     # ----- values are assigned to the respective name(with first letter capital)
+    
     Names = ["Covid", "Typhoid", "Chicken Pox", "Pneumonia", "Influenza", "Sars", "Mers", "Ebola", "Malaria"]
     Calculated_Values = [covid, typhoid, chicken_pox, pneumonia, influenza, sars, mers, ebola, malaria]
-    # for i in Calculated_Values:
-    #     print(i,end=" ")
-    # print()
-    print("The real names are")
-    for i in Names:
-        print(i, end =  " ")
-    print()
+    
     Sizeof_List = len( Calculated_Values)
+    
     Average_Values = []  # List of average values
+    
     for i in range(0, Sizeof_List, +1):
         average = round((Calculated_Values[i] / Highest_valuesof_diseases[i] )* 100, 3)
         Average_Values.append(average)
@@ -822,7 +836,9 @@ def query_fun(answer_value):
     Which_second_highest = ""
     Which_third_highest = ""
     i = 0
-    for i in range(0, len(Average_Values), +1):
+    
+    # ----------- Finding the Most Possible disease and store it's name in "Which_highest"
+    for i in range(0, len(Average_Values), +1):   
         if(Average_Values[i] == highest_possibility):
             if(len(Which_highest) == 0): 
                 Which_highest = Names[i]
@@ -832,31 +848,21 @@ def query_fun(answer_value):
                 else:
                     if(len(Which_third_highest) == 0):
                         Which_third_highest = Names[i]
-    print(highest_possibility)
-    print(Which_highest)
-    # First highest must be found in the form of string
-    # Findint Second largest average value if it is not yet being stored as a string
+                        
+                        
+                        
+    # ----------- Finding the Second most possible disease and store it's name in "Which_second_highest"
     Find_second_highest = []
     Find_second_names = []
     Temporary_second_highest = 0
     if(len(Which_second_highest) == 0):
         Find_second_names = Names.copy()
         Find_second_names.remove(Which_highest)
-        for i in Find_second_names:     # debug line
-            print(i, end = " ")
-        print()
         for i in range(0, len(Average_Values), +1):
             if(Average_Values[i] == highest_possibility):
                 continue
             Find_second_highest.append(Average_Values[i])
         another = 0
-        for i in Find_second_highest:    # debug line
-            print(i, end=" ")
-        print()
-        # for i in range(0,len(Find_second_highest), +1):
-        #     if(another < Find_second_highest[i]):
-        #         another= Find_second_highest
-        # print("Type of Find_second_highest is : " + type(Find_second_highest))
         Temporary_second_highest = max(Find_second_highest)
         for i in range(0,len(Find_second_names), +1):
             if(Find_second_highest[i] == Temporary_second_highest):
@@ -865,44 +871,25 @@ def query_fun(answer_value):
                 else:
                     if(len(Which_third_highest) == 0):
                         Which_third_highest = Find_second_names[i]
-    # Finding third largest average value if it is not yet being stored as a string
-    print(Which_second_highest)
-    print(Temporary_second_highest)
+                        
+
+    # ----------- Finding third Possible disease and store it's name in "Which_third_highest"
     Find_third_names = []
     Find_third_highest = []
     if(len(Which_third_highest) == 0):
-        # Find_third_names = Find_second_names.copy()
         for i in range(0, len(Find_second_names), +1):
             if(Find_second_names[i] == Which_second_highest):
                 continue
             Find_third_names.append(Find_second_names[i])
-        for i in Find_third_names:
-            print(i, end = " ")
-        print()
-        # Find_third_names.remove(Which_second_highest)
-        # for i in range(0, len(Find_third_highest), +1):
-        #     if(Find_third_highest[i] == highest_possibility or Find_third_highest == Temporary_second_highest):
-        #         Find_third_highest.remove(Find_third_highest[i])
         for i in range(0, len(Find_second_highest), +1):
             if(Find_second_highest[i] == Temporary_second_highest):
                 continue
             Find_third_highest.append(Find_second_highest[i])
-        # Find_third_highest.remove(highest_possibility)
-        # Find_third_highest.remove(Temporary_second_highest)
         Temporary_third_highest = max(Find_third_highest)
-        print(Temporary_third_highest)
-        # temp = 0
-        # for i in range(0, len(Find_third_highest), +1):
-        #     if(temp < Find_third_highest[i]):
-        #         temp = Find_third_highest[i]
-        # Temporary_third_highest = temp
         for i in range(0,len(Find_third_names), +1):
             if (Find_third_highest[i] == Temporary_third_highest):
                 Which_third_highest = Find_third_names[i]
                 break
-    # print(Which_second_highest)
-    print(Which_third_highest)
-
 
 
 
