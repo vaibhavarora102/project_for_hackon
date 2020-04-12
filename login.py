@@ -57,6 +57,11 @@ class main_win:
         print("Email = ",self.email.get())
         print("Gender = ",self.gender.get())
         symptom.vp_start_symptom_gui()
+        
+        global w
+        w.destroy()
+        w = None
+        
     def __init__(self, top=None):
         '''This class configures and populates the toplevel window.
            top is the toplevel containing window.'''
