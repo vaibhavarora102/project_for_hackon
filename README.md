@@ -1,6 +1,10 @@
 # project_for_hackon
 health of person
 
+# build info
+
+### --v 0.1.0
+[mess](mess.py) call code crammed to to one file just run this file independently to see possible outcome.
 
 ## [LICENCE](LICENSE)
   Copyright (C) 2020 
