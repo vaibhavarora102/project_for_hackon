@@ -31,10 +31,6 @@ def destroy_window():
     top_level.destroy()
     top_level = None
 
-#if __name__ == '__main__':
-#    import login
-#    login.vp_start_login_gui()
-
 
 
 
