@@ -4,7 +4,7 @@ Our goal is to create an easy way for self-diagnosis of some common disease name
 It includes a basic program to give an idea of possible disease, things to avoid for that possible disease, locally available health centre. 
 # build info
 ### --v 0.2.0
-[main](main.py) ~ better distriduted and clean code. it need 5 files [main](main.py), [login](login.py), [login_support](login_support.py), [symptom](symptom.py) and [symptom_support](symptom_support.py) to be at Same Place.   Just run [main](main.py) .
+[demo1](demo1) ~ better distriduted and clean code. it need 5 files [main](main.py), [login](login.py), [login_support](login_support.py), [symptom](symptom.py) and [symptom_support](symptom_support.py) to be at Same Place.   Just run [main](main.py) .
 
 ### --v 0.1.0
 [mess](mess.py) ~all code crammed to to one file just run this file independently to see possible outcome.
