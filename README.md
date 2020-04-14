@@ -4,7 +4,7 @@ Our goal is to create an easy way for self-diagnosis of some common disease name
 It includes a basic program to give an idea of possible disease, things to avoid for that possible disease, locally available health centre. 
 # build info
 ### --v 0.2.1
-[demo 2](demo_2) ~ rum C.A.A.py to start voice assistant . Say Self diagnosis an here run somthing similar to demo1   
+[demo 2](demo_2) ~ rum C.A.A.py to start voice assistant . Say Self diagnosis an here run something similar to demo1   
 ### --v 0.2.0
 [demo1](demo_1) ~ better distriduted and clean code. it need 5 files [main], [login], [login_support], [symptom] and [symptom_support] to be at Same Place.   Just run [main] .
 
