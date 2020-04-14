@@ -1,3 +1,5 @@
+import login 
+
 import pyttsx3
 import datetime
 import wikipedia
@@ -13,7 +15,6 @@ import requests
 import bs4
 import pyaudio
 import cv2
-import main 
 
 engine = pyttsx3.init("sapi5")
 # engine = pyttsx3.init()
@@ -72,7 +73,7 @@ while True:
 
     if ' self diagnosis' in query:
         speak('Starting Self Diagnosis Software')
-        main.login.vp_start_login_gui()
+        login.vp_start_login_gui()
     elif 'wikipedia' in query:
         speak('searching wikipedia ...')
         query = query.replace("wikipedia", "")
