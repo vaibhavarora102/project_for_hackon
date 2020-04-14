@@ -91,16 +91,6 @@ while True:
             search_url = url+text
             webbrowser.open(search_url)
 
-    #     res = requests.get('https://google.com/search?q=' + ''.join(sys.argv[1:]))
-    #     res.raise_for_status()
-    #     say = bs4.BeautifulSoup(res.text, "html.parser")
-    #     query = query.replace("search", "")
-    #     # linkElement = say.select('.r a')
-    #     LinkToOpen = min(3, len(query))
-    #     # LinkToOpen = min(3, len(linkElement))
-    #     for i in range(LinkToOpen):
-    #         webbrowser.open('https;//google.com' + query[i].'href'))
-    #         # webbrowser.open('https;//google.com' + linkElement[i].get('href'))
 
     elif 'open youtube' in query:
         webbrowser.open("youtube.com")
@@ -126,10 +116,7 @@ while True:
 
     elif 'hi assistant' in query:
         speak('hello, how are you sir')
-
-    elif 'my contact number' in query:
-        speak('9888152758')
-
+          
     elif 'explain' in query:
         print(" hi every one, let me first introduce my self, i am a program code over the phython "
               "3.7 version on the pyCharm")
@@ -156,8 +143,6 @@ while True:
               "about my name, play music and much more  ")
 
         speak("many upgradation are still in progress ")
-    # elif 'hod sir number' in query:
-    #     speak('8282859800')
 
     elif 'hod of cse' in query:
         speak('engineer sandeep sharma is H O D OF  C S E DEPARTMENT')
@@ -176,28 +161,7 @@ while True:
     elif 'open twitter' in query:
         webbrowser.open("twitter.com")
 
-    elif 'email' in query:
-        try:
-            server = smtplib.SMTP('smtp.gmail.com', 587)
-            # server = smtplib.SMTP('smtp.gmail.com', 465)
-            server.ehlo()
-            server.starttls()
-            speak("to whom you want to send")
-            speak("please enter email of person to whom you want to email")
-            to = input("please enter email of person to whom you want to email ")
-            speak("what you want to send")
-            server.login('aroravaibhav661@gmail.com ', 'mkt12345')
-            content = take()
-            speak('sending')
-            print('sending mail')
-            server.sendmail('aroravaibhav661@gmail.com', to, content)
-            server.close()
-            speak('email sent')
-    #     # finally: server.quit()
-        except Exception as e:
-            print(e)
-            speak("sorry !  due to some error, email is not sent")
-    #
+   
 
     elif 'time' in query:
         strTime = datetime.datetime.now().strftime("%H:%M:%S")
@@ -213,46 +177,13 @@ while True:
         path = "%windir%\\system32\\mspaint.exe"
         os.startfile(path)
 
-    # elif 'send email' in query:
-    #     try:
-    #         server = smtplib.SMTP('localhost', 587)
-    #         server.ehlo()
-    #         server.starttls()
-    #         server.ehlo()
-    #         server.login('aroravaibhav661@gmail.com ', 'mkt12345')
-    #         text = take()
-    #         to = input("pls type the email address of person to whom you want to send mail")
-    #         server.sendmail('aroravaibhav661@gmail.com', to, text)
-    #         server.close()
-    #         server.sendmail(fromaddr, toaddr, text)
-    #         server = smtplib.SMTP('mail')
-    #         server.set_debuglevel(True)
-    #         dhellmann_result = server.verify('dhellmann')
-
-    # elif 'email to vaibhav' in query:
-    #     try:
-    #         speak("what should send to vaibhav")
-    #         content = take()
-    #         to ="aroravaibhav102@gmail.com"
-    #         sendEmail(to, content)
-    #         speak('email has been send')
-    #     except Exception as e:
-    #         print(e)
-    #         speak("sorry !  due to some error, email is not sent")
+  
 
     elif ' tell location ' or 'map' in query:
         location = input('pls type the location     ')
         speak("pls type the location")
         webbrowser.open("www.google.co.in/maps/search/" + location)
 
-    # elif ' tell location ' or 'map' in query:
-    #     speak("please type the location")
-    #     location = input('pls type the location    ')
-    #     webbrowser.open("www.google.co.in/maps/place/" + location)
-
+  
     else:
         speak('try again with different keyword or definite pattern')
-
-# print("isse exit kese karenge")
-# elif 'quit' in query:
-#     close()
