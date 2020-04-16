@@ -100,25 +100,29 @@
   </head>
   <body bgcolor=#1c87c9>
     <div class="testbox">
-      <form action="/" ><center>
-        <h1>Self-diagnosis Result</h1>
+      <form action="form_sub" method="POST" >
+        <center>
+          {%  csrf_token %}
+
+          {% block content %}
+        <h1><font size="6">Self-diagnosis Result</font> </h1>
+        <p ><font size="3"> <b> Name :</b>{{name}}  &nbsp;&nbsp;  <b>Age :</b>{{age}}  &nbsp;&nbsp;  <b>E-mail :</b>{{email}}  </font>
+        </p>
         <table>
           <tr>
-            <th class="first-col"><h2>posiblty</h2></th>
+            <td class="first-col"> We just try to predict a possible outcome. <br>
+              We totally Disclaimer any responsibility for the result.</td>
           </tr>
           <tr>
-            <th class="first-col"><br>top {{first}}<br>
-            </th>
+            <td class="first-col">There is a high chance you may have {{first}}</td>
           </tr>
           <tr>
-            <th class="first-col"><br>   mid {{sec}}<br>
-            </th>
+            <td class="first-col">There is a bit lesser chance you may have {{sec}}</td>
           </tr>
           <tr>
-            <th class="first-col"> <br> bottom {{third}} 
-            </th>
-          </tr>
-
+            <td class="first-col">There is a lesser chance you may have {{third}}</td>
+          </tr>￼
+          {% endblock %}
         </table></center>
       </form>
     </div>

@@ -14,14 +14,6 @@ def login_sub(request):
     #gen =' ' + request.POST['gender']
     return render(request,'form.html',{'name':name,'age':age,'email':email})
 
-def add(request):
-
-    val1= int(request.POST['num1'])
-    val2= int(request.POST['num2'])
-    res= val1 + val2
-
-    return render(request,'result.html',{'result':res})
-
 def spl_submit(request):
     md = 0
     if 'YES' == request.POST['history'] :
@@ -32,8 +24,8 @@ def spl_submit(request):
         md += 1
     if 'YES' == request.POST['breathing'] :
         md += 1
-    if md == 1:
-        return render(request,'result.html',{'first':fir,'sec':sec,'third':thi})
+    if md <= 1 :
+        return render(request,'result.html',{'name':name,'age':age,'email':email,'first':fir,'sec':sec,'third':thi})
     else :
         return render(request,'result_2.html')
     
@@ -680,4 +672,4 @@ def form_sub(request):
     if "Covid" in [Which_highest , Which_second_highest , Which_third_highest] :
         return render(request,'spl_covid.html',{'name':name,'age':age,'email':email})
     else:
-        return render(request,'result.html',{'first':fir,'sec':sec,'third':thi})
+        return render(request,'result.html',{'name':name,'age':age,'email':email,'first':fir,'sec':sec,'third':thi})
