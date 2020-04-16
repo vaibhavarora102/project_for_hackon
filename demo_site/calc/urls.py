@@ -5,6 +5,6 @@ urlpatterns = [
     path('login_sub',views.login_sub,name='login_sub'),
     path('disclamer',views.disclamer, name='disclamer'),
     path('form_sub',views.form_sub, name='form_sub'),
-    path('add',views.add,name='add'),
+    path('spl_submit',views.spl_submit,name='spl_submit'),
 ]
  

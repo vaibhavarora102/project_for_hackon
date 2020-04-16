@@ -7,11 +7,11 @@ def home(request):
 def disclamer(request):
     return render(request, 'disclamer.html')
 def login_sub(request):
-    name =' ' + request.POST['name']
-    email =' ' + request.POST['email']
+    global name , email ,age
+    name = ' ' + request.POST['name']
+    email = ' ' + request.POST['email']
     age =' ' + request.POST['age']
     #gen =' ' + request.POST['gender']
-
     return render(request,'form.html',{'name':name,'age':age,'email':email})
 
 def add(request):
@@ -21,6 +21,23 @@ def add(request):
     res= val1 + val2
 
     return render(request,'result.html',{'result':res})
+
+def spl_submit(request):
+    md = 0
+    if 'YES' == request.POST['history'] :
+        md += 1
+    if 'YES' == request.POST['infected'] :
+        md += 1
+    if 'YES' == request.POST['chronic'] :
+        md += 1
+    if 'YES' == request.POST['breathing'] :
+        md += 1
+    if md == 1:
+        return render(request,'result.html',{'first':fir,'sec':sec,'third':thi})
+    else :
+        return render(request,'result_2.html')
+    
+
 
 def form_sub(request):
     sy_1 = request.POST['fever']
@@ -652,9 +669,15 @@ def form_sub(request):
             if (Find_third_highest[i] == Temporary_third_highest):
                 Which_third_highest = Find_third_names[i]
                 break
+    global fir ,sec ,thi
     fir = Which_highest
     sec = Which_second_highest
     thi  = Which_third_highest
-    
-    
-    return render(request,'result.html',{'first':fir,'sec':sec,'third':thi})
+
+
+
+
+    if "Covid" in [Which_highest , Which_second_highest , Which_third_highest] :
+        return render(request,'spl_covid.html',{'name':name,'age':age,'email':email})
+    else:
+        return render(request,'result.html',{'first':fir,'sec':sec,'third':thi})

@@ -1,5 +1,5 @@
 
-if 'Covid'== 'Which_highest' or'Which_second_highest' or 'Which_third_highest':
+ifww 'Covid'== 'Which_highest' or'Which_second_highest' or 'Which_third_highest':
     md=0
     print('had any travel history to foreign contry in last 21 days?')
 #     make gui with option yes and no
