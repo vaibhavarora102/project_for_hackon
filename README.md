@@ -1,8 +1,19 @@
 # Self-diagnosis solution
 Our goal is to create an easy way for self-diagnosis of some common disease namely COVID, typhoid, chicken_pox, pneumonia, influenza, sars, MERS, Ebola and malaria which all have similar symptoms like fever , sneezing and body-pain.  <br /> <br />
  Our application is designed is such a way it calls the user to use it. For example, Our application has the comfort of voice-based input, including multi-language support, both input and output. User can easily choose to switch between audio input and manual input with minimalistic GUI(Graphical User Interphase). <br /> <br />
-It includes a basic program to give an idea of possible disease, things to avoid for that possible disease, locally available health centre. 
+It includes a basic program to give an idea of possible disease, things to avoid for that possible disease, locally available health centre.
+## Whats new
+1. Have provide a self diagnosis for initial possible stage.
+2. Had provided voice assitive environment.
+3. Had gatheres info of various resources at a place.
+4. Emphasis on global Pandemic COVID-19.
+5. Still More..
+
+* many things are still in progress
+to visit site [click](https://self-diagnosis.herokuapp.com/)
 # build info
+### --v 0.3.0
+~ the finalized code for final app stucture made on django framework 
 ### --v 0.2.1
 [demo 2](demo_2) ~ rum C.A.A.py to start voice assistant . Say Self diagnosis an here run something similar to demo1   
 ### --v 0.2.0
