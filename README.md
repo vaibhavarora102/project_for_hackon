@@ -12,6 +12,8 @@ It includes a basic program to give an idea of possible disease, things to avoid
 * many things are still in progress
 to visit site [click](https://self-diagnosis.herokuapp.com/)
 # build info
+### --v 1.0.0
+[full site](full_site) ~ it is running wed application running at https://self-diagnosis.herokuapp.com/ fully scalable project .
 ### --v 0.3.0
 ~ the finalized code for final app stucture made on django framework 
 ### --v 0.2.1
